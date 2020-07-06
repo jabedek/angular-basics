@@ -3,8 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-crash-course-todolist';
+  name: string = 'John';
+
+  constructor() {
+    this.changeName('Paul');
+  }
+
+  changeName(name: string): void {
+    this.name = name;
+  }
 }
